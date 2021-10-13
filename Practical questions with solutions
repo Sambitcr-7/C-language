@@ -767,3 +767,84 @@ int main()
     printf("%d", size);
     return 0;
 }
+
+// 46 Print 2 D array
+#include <stdio.h>
+int main()
+{
+    int arr[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    for ( int i = 0; i < 3; i++)
+    {
+        for ( int j = 0; j < 3; j++)
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+//  47 Calculate the sum of all the elements in the 2 D array
+#include <stdio.h>
+int main()
+{
+    int arr[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    for ( int i = 0; i < 3; i++)
+    {
+        for ( int j = 0; j < 3; j++)
+        {
+            printf("%d ", arr[i][j] + arr[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// 48 Print transpose of 2 D matrices
+#include <stdio.h>
+int main()
+{
+    int arr[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    for ( int i = 0; i < 3; i++)
+    {
+        for ( int j = 0; j < 3; j++)
+        {
+            printf("%d ", arr[j][i]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// 49 C Program to display the factorial of a no using do-while loop
+#include <stdio.h>
+int main()
+{
+    int num, i = 1, product = 1;
+    printf("Enter a no");
+    scanf("%d",&num);
+    do
+    {
+        product = product* i;
+        i++;
+    } while (i <= num);
+    printf("%d",product);
+    return 0;
+}
+
+// 50 C program to print the next no
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int i = 0;
+    printf("Enter a string: ");
+    scanf("%s", str);
+    while (str[i] != '\0')
+    {
+        str[i] = str[i] + 1;
+        i++;
+    }
+    printf("%s", str);
+    return 0;
+}
