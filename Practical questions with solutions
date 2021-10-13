@@ -657,3 +657,113 @@ int main()
     }
     return 0;
 }
+
+// 41 input a value in array
+#include<stdio.h>
+int main()
+{
+    int i, j;
+    printf("Enter the size of the array: ");
+    scanf("%d",&j);
+    int a[j];
+    for (i = 0;i <j; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for ( i = 0;i < j; i++)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+
+// 42 Reverse an array
+#include<stdio.h>
+int main()
+{
+    int i, j;
+    printf("Enter the size of the array: ");
+    scanf("%d",&j);
+    int a[j];
+    for (i = 0;i <j; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for ( i = j-1;i >= 0; i--)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+
+// 43 Playing with vovel
+#include<stdio.h>
+int main()
+{
+    char a[5] = {'a','e','i','o','u'} , c;
+    printf("Enter a character: ");
+    scanf("%c",&c);
+    if ( c == a[0] || c == a[1] || c == a[2] || c == a[3] || c == a[4])
+    {
+        printf("The character is vovel");
+    }
+    else
+    {
+        printf("The character is consonent");
+    }
+    return 0;
+}
+
+ // 43 Playing with vovel
+ #include<stdio.h>
+ int main()
+ {
+     char a[5] = {'a','e','i','o','u'} , b[10];
+	int count = 0, i;
+	printf("Enter a string");
+	for ( i = 0; i < 10; i++){
+	scanf("%c",&b[i]);
+     if ( b[i] == a[0] || b[i] == a[1] || b[i] == a[2] || b[i] == a[3] || b[i] == a[4])
+     {
+         count++;
+     }
+    else
+    {
+        printf("The character is consonent");
+    }
+
+}
+printf("Total number of vovel's is %d", count);
+     return 0;
+ }
+
+// 44 Program to check weather the number is even or odd in the array.
+#include <stdio.h>
+int main()
+{
+    int a[5], i;
+    printf("Enter numbers is array: ");
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%d", &a[i]);
+        if (a[i] % 2 == 0)
+        {
+            printf("%dth no is even\n", i);
+        }
+        else
+        {
+            printf("%dth no is odd\n",i);
+        }
+    }
+    return 0;
+}
+
+// 45 Program to calculate the size of array
+#include <stdio.h>
+int main()
+{
+    int arr[5] = { 1 , 2 , 3 , 4 , 6};
+    int size = sizeof arr / sizeof arr[0];
+    printf("%d", size);
+    return 0;
+}
