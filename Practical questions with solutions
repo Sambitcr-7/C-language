@@ -1337,3 +1337,77 @@ int main()
     }
     return 0;
 }
+
+// 71 double pointer
+#include<stdio.h>
+int main ()
+{
+ int a[3][3]={{1,2,3},{4,8,9},{2,67,23}};
+  int **p,*ptr;
+  ptr=&a[0][0];
+  p=&ptr;
+  for(int i=0;i<9;i++)
+  {
+    printf("%d\t",*(*p+i));    //here *p is equal to ptr(which acts as p in above program)
+  }
+  return 0;
+}
+
+// // 72. C program to print the address and the entered integer with their
+//  hexadecimal values
+#include <stdio.h>
+int main()
+{
+    int num, *ptrq = &num;
+    printf("Enter the number: ");
+    scanf("%d", &num);
+    printf("\nThe address of num in hexadecimal is %x", ptrq);
+    printf("\nThe value of num is %d", num);
+    return 0;
+}
+
+// 73 C program to create a structure which stores and display the name of the player and their Jersey number.
+#include<stdio.h>
+int main()
+{
+    struct player
+    {
+        char name[20];
+        int jersey;
+    };
+    struct player p1 = {"Sachin", 10};
+    struct player p2 = {"Dhoni", 7};
+    printf("The name of the player is %s and the jersey number is %d", p1.name, p1.jersey);
+    printf("\nThe name of the player is %s and the jersey number is %d", p2.name, p2.jersey);
+    return 0;
+}
+
+// 74. C program to create an array of structures which stores and displays the names Of the player and their jersey number.
+#include<stdio.h>
+int main()
+{
+    struct player
+    {
+        char name[20];
+        int jersey;
+    };
+    struct player p[4] = {{"Sachin", 10},{"Dhoni", 7},{"Virat", 8},{"Rohit", 9}};
+    printf("The name of the player is %s and the jersey number is %d", p[0].name, p[0].jersey);
+    printf("\nThe name of the player is %s and the jersey number is %d", p[1].name, p[1].jersey);
+    return 0;
+}
+
+// 75 C program to create an alias name of the structure which stores and displays the names Of the players and their jersey number.
+#include<stdio.h>
+int main()
+{
+    typedef struct player{
+        char*  name;
+        int jersey;
+    }rcb;
+    rcb p[10] = {{"Sachin", 10},{"Dhoni", 7},{"Virat", 8},{"Rohit", 9}};
+    for(int i = 0; i < 4;i++){
+        printf("jersey no. of %s is %d\n",p[i].name,p[i].jersey);
+    }
+    return 0;
+}
