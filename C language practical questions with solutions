@@ -144,3 +144,72 @@ int main()
     printf("%d! = %d\n", t, fact);
     return 0;
 }
+
+// 11 Print the sum of n numbers
+#include <stdio.h>
+int main()
+{
+    int t, i, sum = 0;
+    printf("Enter a number : ");
+    scanf("%d", &t);
+    sum = t * (t + 1) / 2;
+    printf("Sum of n numbers = %d", sum);
+    return 0;
+}
+
+// 12 Print the sum of the series n^2
+#include <stdio.h>
+int main()
+{
+    int t, i, sum_of_series;
+    printf("Enter a number : ");
+    scanf("%d", &t);
+    sum_of_series = t * (t + 1) * (2 * t + 1) / 6;
+    printf("Sum of the series = %d", sum_of_series);
+    return 0;
+}
+
+// 13 Print the sum of the series n^3
+#include <stdio.h>
+int main()
+{
+    int t, i, sum_of_series;
+    printf("Enter a number : ");
+    scanf("%d", &t);
+    sum_of_series = (t * (t + 1) / 2) * (t * (t + 1) / 2);
+    printf("Sum of the series = %d", sum_of_series);
+    return 0;
+}
+
+// 14 calculating a^b using for loop
+#include <stdio.h>
+int main()
+{
+    int a, b, i, product = 1;
+    printf("Enter a and b : ");
+    scanf("%d%d", &a, &b);
+    for (i = 1; i <= b; i++)
+    {
+        product = product * a;
+    }
+    printf("%d", product);
+    return 0;
+}
+
+// 15 Check if the person is eligible for voter id card or not
+#include <stdio.h>
+int main()
+{
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", age);
+    if (age <= 18)
+    {
+        printf("You are not eligible");
+    }
+    else
+    {
+        printf("You are eligible");
+    }
+    return 0;
+}
