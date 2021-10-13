@@ -985,3 +985,108 @@ int main()
     }
     return 0;
 }
+
+// 56 Program to change the 3rd bit of a given no
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("Enter the no you want to change \n");
+    scanf("%d", &num);
+    num = num ^ 8;
+    printf("%d",num);
+    return 0;
+}
+
+// 57 Write a program to write A to Z except D, J, M, T, Y.
+#include <stdio.h>
+int main()
+{
+    char alphabet = 'A';
+    while ( alphabet <= 'Z')
+    {
+        if ( alphabet != 'D' || alphabet != 'J' || alphabet != 'M' || alphabet != 'T' || alphabet != 'Y' )
+        {
+            printf("%c\n", alphabet);
+        }
+        alphabet++;
+    }
+    return 0;
+}
+
+// 58 Write a program to solve a! * a ^ b
+#include<stdio.h>
+int main()
+{
+    int ans = 1, a, b ,factorial = 1, i, power = 1;
+    printf("Enter the numbers");
+    scanf("%d%d", &a, &b);
+    for ( i = 1; i <= a; i++)
+    {
+        factorial = factorial * i;
+    }
+    for ( i = 1; i <= b; i++)
+    {
+        power *= a ;
+    }
+    ans = factorial * power;
+    printf("%d" , ans);
+    return 0;
+}
+
+// 59 Write a program to write A A1 A1C A1C3 A1C3E
+#include <stdio.h>
+int main()
+{
+    int size_of_triangle;
+    printf("Enter the size of the structure\n");
+    scanf("%d", &size_of_triangle);
+    for (int i = 0; i <= size_of_triangle; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            if (j & 1)
+            {
+                printf("%d", 0 + j);
+            }
+            else
+            {
+                printf("%c", 'A' + j);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// 60 C program to sort an array with bubble sort
+#include <stdio.h>
+int main()
+{
+    int tem, n, arr[100];
+    printf("Enter the size of the array\n");
+    scanf("%d", &n);
+    printf("Enter the array\n");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                tem = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tem;
+            }
+        }
+    }
+    printf("Sorted array using bubble sort is :\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d\n", arr[i]);
+    }
+    return 0;
+}
