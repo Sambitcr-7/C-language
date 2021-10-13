@@ -1090,3 +1090,97 @@ int main()
     }
     return 0;
 }
+
+// 61 Print Hello World using functions
+#include <stdio.h>
+void hello();
+int main()
+{
+    hello();
+    return 0;
+}
+void hello()
+{
+    printf("Hello GGV");
+}
+
+//  62 Finding factorial using functions
+#include<stdio.h>
+int fact();
+int main()
+{
+    int num;
+    printf("Enter a no\n");
+    scanf("%d", &num);
+    fact(num);
+    return 0;
+}
+
+int fact(int n)
+{
+    int product = 1;
+    for (int i = 1; i <= n; i++ )
+    {
+        product = product * i;
+    }
+    printf("The factorial of %d is %d",n,product);
+}
+
+// 63 Print sum of 2 numbers using function
+#include <stdio.h>
+float sum(float a,float b);
+int main()
+{
+    float a,b;
+    printf("Enter 2 numbers\n");
+    scanf("%f%f",&a,&b);
+    sum(a,b);
+    return 0;
+}
+
+float sum(float a,float b)
+{
+    printf("Sum of those no is %0.2f",a+b);
+}
+
+// 64 Program to display from the entered character to 'Z' using functions
+#include <stdio.h>
+char s(char a);
+int main()
+{
+    char a;
+    printf("Enter a Starting character");
+    scanf("%c", &a);
+    s(a);
+    return 0;
+}
+
+char s(char a)
+{
+    while (a != 'Z' + 1)
+    {
+        printf("%c\n", a);
+        a++;
+    }
+}
+
+// 65 Program to calculate area of circle using function
+#include<stdio.h>
+float area(float r);
+int main()
+{
+    float radius;
+    printf("Enter the radius\n");
+    scanf("%f",&radius);
+    // area(radius);
+    printf("The area of the circle is %f", area(radius));
+    return 0;
+}
+
+float area(float r)
+{
+    float ar;
+    ar = 3.14 * r * r;
+    // printf("\nArea of circle is %f\n",ar);
+    return ar;
+}
