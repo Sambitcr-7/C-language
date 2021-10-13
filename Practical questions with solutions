@@ -477,3 +477,99 @@ int main()
     }
     return 0;
 }
+
+// 31 Reversed right angled triangle
+#include <stdio.h>
+int main()
+{
+    int i, j, n;
+    printf("Enter the size of pattern: ");
+    scanf("%d", &n);
+    for (i = n; i >= 1; i--)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// 32 print a bb ccc pattern
+#include<stdio.h>
+int main()
+{
+    int i , j , n;
+    printf("Enter the size ");
+    scanf("%d", &n);
+    for (i = 1; i <= n ; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            printf("%c", i + 64);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// 33 Print a ab abc abcd
+#include <stdio.h>
+int main()
+{
+    int i, j, n, a;
+    printf("Enter the size ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            printf("%c", j + 64);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// 34 Program to find Armstrong number
+#include <stdio.h>
+int main()
+{
+    int n, r, sum = 0, t;
+    printf("Enter the Number:");
+    scanf("%d", &n);
+    t = n;
+    while (n != 0)
+    {
+        r = n % 10;
+        sum = sum + r * r * r;
+        n = n / 10;
+    }
+    if (t == sum)
+    {
+        printf("Number is armstrong");
+    }
+    else
+    {
+        printf("Number is not armstrong");
+    }
+    return 0;
+}
+
+// 35 Program to count the total no of digits
+#include <stdio.h>
+int main()
+{
+    int t, i = 0, tem;
+    printf("Enter a number: ");
+    scanf("%d",&t);
+    while (t != 0)
+    {
+        tem = t % 10;
+        t = t / 10;
+        i++;
+    }
+    printf("The size of the number is %d",i);
+    return 0;
+}
