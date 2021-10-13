@@ -573,3 +573,87 @@ int main()
     printf("The size of the number is %d",i);
     return 0;
 }
+
+// 36 Program to find even number by bitwise operator
+#include <stdio.h>
+int main()
+{
+    int t;
+    printf("Enter a number to check if its even or not : ");
+    scanf("%d",&t);
+    if (t&1 != 0){
+        printf("The number %d is odd",t);
+    }
+    else
+    {
+        printf("The number %d is even",t);
+    }
+    return 0;
+}
+
+// 37 Program to find the no of ones of a number in binary form
+#include<stdio.h>
+int main()
+{
+    int num, i = 0, t;
+    printf("Enter a number : ");
+    scanf("%d",&num);
+    t = num;
+    while (t != 0)
+    {
+       i += t & 1;
+       t>>= 1;
+    }
+    printf("No of ones in the number %d is %d",num , i);
+    return 0;
+}
+
+// 38 calculate minimum number of bits required to make the integer
+#include<stdio.h>
+int main()
+{
+    int num, i = 0, tem;
+    printf("Enter a number : ");
+    scanf("%d",&num);
+    tem = num;
+    while (tem != 0)
+    {
+        tem >>= 1;
+        i++;
+    }
+    printf("Minimum no of bits required for the number %d is %d", num, i);
+    return 0;
+}
+
+// 39 Check wether the  integer at input is set or not
+#include <stdio.h>
+int main()
+{
+    int num, j, tem;
+    printf("Enter a number and position: ");
+    scanf("%d%d", &num, &j);
+    tem = num;
+    tem >>= j;
+    tem = tem & 1;
+    if (tem == 0)
+    {
+        printf("%d at %d is not a set", num, j);
+    }
+    else
+    {
+        printf("%d at %d is a set", num, j);
+    }
+    return 0;
+}
+
+// 40 Initialise an array
+#include<stdio.h>
+int main()
+{
+    int a[5] = {1,2,3,4,5};
+    for (int i = 0; i<= 4;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
