@@ -1415,3 +1415,265 @@ int main()
     }
 }
 
+
+// *****************************************************************
+//star Pattern -25
+#include <stdio.h>
+int main()
+{
+    int i, j, k = 1, n = 11, m = 0;
+    for (i = 1; i <= 21; i++)
+    {
+        i <= n ? m++ : m--;
+        k = m - 1;
+        for (j = 1; j <= 21; j++)
+        {
+            if (j >= n + 1 - m && j <= n - 1 + m)
+
+                printf(" %d", j < n ? k++ % 10 : k-- % 10);
+
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+}
+
+// *************************************************************8
+//Square in square
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 7; i++)
+    {
+        for (j = 1; j <= 7; j++)
+        {
+            if ((i == 1 || i == 7 || j == 1 || j == 7) || (i >= 3 && i <= 5 && j >= 3 && j <= 5) && (i == 3 || i == 5 || j == 3 || j == 5))
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+
+// *******************************************************
+//1
+//12A
+//123AB
+//123ABC
+#include <stdio.h>
+int main()
+{
+    int i, j, k;
+    for (i = 1; i <= 4; i++)
+    {
+        k = 49;
+        for (j = 1; j <= 7; j++)
+        {
+            if (j >= -i && j <= 3 + i)
+            {
+                printf("%c", k);
+                k++;
+                if (j == 4)
+                    k = 65;
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+
+// *************************************************************
+//A1
+//AB12
+//ABC123
+//ABCD1234
+#include <stdio.h>
+int main()
+{
+    int i, j, k;
+    for (i = 1; i <= 4; i++)
+    {
+        k = 'A';
+        for (j = 1; j <= 8; j++)
+        {
+            if (j >= 5 - i && j <= 4 + i)
+            {
+                if (j == 5)
+                    k = '1';
+                printf("%c", k);
+                k++;
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+// *************************************************
+//A
+//ABA
+//ABCBA
+//ABCDBA
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    char k;
+    for (i = 1; i <= 4; i++)
+    {
+        k = 'A';
+        for (j = 1; j <= 7; j++)
+        {
+            if (j >= 5 - i && j <= 3 + i)
+            {
+                printf("%c", k);
+                j < 4 ? k++ : k--;
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+// ***************************************************************
+// 1 in center
+// 23
+// 345
+// 678910
+#include <stdio.h>
+int main()
+{
+    int num, r, c, sp, i = 1;
+    printf("Enter any number : ");
+    scanf("%d", &num);
+    for (r = 1; r <= num; r++)
+    {
+        for (sp = 1; sp <= num - r; sp++)
+            printf(" ");
+        for (c = 1; c <= r; c++, i++)
+            printf("%d ", i);
+        printf("\n");
+    }
+    return 0;
+}
+
+// ************************************************************
+
+// 1  2  3  4  5
+// 16          6
+// 15          7
+// 14          8
+// 13 12 11 10 9
+int main()
+{
+    int i, j, k = 6, l = 13, m = 16;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 1; j <= 5; j++)
+        {
+            if (i == 1)
+                printf("%-3d", j);
+            else if (j == 5)
+                printf("%-3d", k++);
+            else if (i == 5)
+                printf("%-3d", l--);
+            else if (j == 1)
+                printf("%-3d", m--);
+            else
+                printf("   ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+// ************************************************************************
+// ABCDEFGFEDCBA
+// ABCDEF  EDCBA
+// ABCDE     DCBA
+// ABCD         CBA
+// ABC             BA
+// AB                 A
+// A
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, j;
+
+    for (i = 1; i <= 7; i++)
+    {
+
+        for (j = 1; j <= 8 - i; j++)
+        {
+            printf("%c", (64 + j));
+        }
+
+        for (int m = 1; m <= i - 1; m++)
+        {
+            printf(" ");
+        }
+        for (int n = 1; n <= i - 1; n++)
+        {
+            printf(" ");
+        }
+
+        for (int k = 7 - i; k >= 1; k--)
+        {
+            printf("%c", (64 + k));
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+// ***********************************************************
+// ABCDEFGFEDCBA
+// ABCDEF FEDCBA
+// ABCDE   EDCBA
+// ABCD     DCBA
+// ABC       CBA
+// AB         BA
+// A           A
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int i, j, m, k = 0, l, p = 0, o, a, b = 0, c = 0;
+    m = 'G';
+    o = 'F';
+    for (j = 1; j <= 7; j++)
+    {
+        for (i = 'A'; i <= (m - k); i++)
+        {
+            printf("%c", i);
+        }
+        for (a = 1; a < b; a++)
+        {
+            printf(" ");
+        }
+        for (l = (o - p); l >= 'A'; l--)
+        {
+            printf("%c", l);
+        }
+        p = p + c;
+        b = b + 2;
+        k = k + 1;
+        c = 1;
+        printf("\n");
+    }
+    getch();
+}
