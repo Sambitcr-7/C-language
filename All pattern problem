@@ -2264,3 +2264,182 @@ int main()
         printf("\n");
     }
 }
+
+// *******************************************************
+//star 9 in pattern
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 12; j++)
+        {
+            if (i > 1 && i < 5 && j > 2 && j < 10 || i > 6 && i < 12 && j < 10)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+}
+
+// ***************************************************
+//Star 0 pattern
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 6; j++)
+        {
+            if (i < 2 && j > 0 && j < 6 || i > 9 && j > 0 && j < 6 || i > 1 && i < 10 && j < 1 || i > 1 && i < 10 && j > 5)
+            {
+                printf("**");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+// *******************************************
+//Print + in star
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 11; j++)
+        {
+            if (i > 2 && i < 5 && j < 7 && j > 4 || i > 4 && i < 7 || i > 6 && i < 9 && j < 7 && j > 4)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+// ********************************
+//- in  star Pattern
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 11; j++)
+        {
+            if (i > 4 && i < 7)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+
+// **********************************************************
+// student marks roll Displaying Information
+#include <stdio.h>
+struct student
+{
+    char name[50];
+    int roll;
+    float marks;
+} s;
+
+int main()
+{
+    printf("Enter information:\n");
+    printf("Enter name: ");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+
+    printf("Displaying Information:\n");
+    printf("Name: ");
+    printf("%s", s.name);
+    printf("Roll number: %d\n", s.roll);
+    printf("Marks: %.1f\n", s.marks);
+
+    return 0;
+}
+
+
+// *********************************
+
+//* in star pattern
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 5; j++)
+        {
+            if (i == 3 && j == 0 || i == 3 && j == 5 || i == 4 && j == 1 || i == 4 && j == 4 || i == 5 && j == 2 || i == 5 && j == 3 || i == 7 && j == 2 || i == 7 && j == 3 || i == 8 && j == 1 || i == 8 && j == 4 || i == 9 && j == 0 || i == 9 && j == 5)
+            {
+                printf("**");
+            }
+            else if (i == 6 && j == 2)
+            {
+                printf(" *");
+            }
+            else if (i == 6 && j == 3)
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+// ***********************************
+// = in star pattern
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 11; j++)
+        {
+            if (i > 2 && i < 5 || i > 5 && i < 8)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
