@@ -1192,3 +1192,226 @@ int main()
         printf("\n");
     }
 }
+
+// *************************************************************************
+// x line
+//and x star
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 7; i++)
+    {
+        for (j = 1; j <= 7; j++)
+        {
+            if (j == i || j == 8 - i)
+            {
+                if (i == 8 - j)
+                    printf("/");
+                else
+                    printf("\\");
+            }
+            else
+                printf("*");
+        }
+        printf("\n");
+    }
+}
+
+
+// *********************************************************************
+// X star
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 1; j <= 5; j++)
+        {
+            if (j == i || j == 6 - i)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+// ***********************************************************8
+//     1
+//   A  B
+// 1  2  3
+//A B C  D
+#include <stdio.h>
+int main()
+{
+    int i, j, k, line, num;
+    char alpha;
+    printf("Enter number of lines :");
+    scanf("%d", &line);
+    for (i = 1; i <= line; i++)
+    {
+        k = 1;
+        num = 1;
+        alpha = 'A';
+        for (j = 1; j <= 2 * line - 1; j++)
+        {
+            if (j >= line + 1 - i && j <= line - 1 + i)
+            {
+                if (k)
+                {
+                    if (i % 2 == 1)
+                        printf("%d", num++);
+                    else
+                        printf("%c", alpha++);
+                }
+                else
+                    printf(" ");
+                k = 1 - k;
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+
+// **********************************************************************
+//              *
+//               **
+//             ***
+//                **
+//    1
+//    1
+//    1
+//*
+//**
+//****
+//**
+//*  input is 6 or any no
+#include <stdio.h>
+int main()
+{
+    int n, i, j, k;
+    printf("Enter value of n=");
+    scanf("%d", &n);
+
+    for (i = 1; i <= 3 * n; i++)
+    {
+        for (j = 1; j <= 2 * n - 1; j++)
+        {
+            if (i <= n)
+            {
+                if (j >= 2 * n - i)
+                    printf("*");
+                else
+                    printf(" ");
+            }
+            else if (i <= 2 * n)
+            {
+                k = 0;
+                if (j == n)
+                {
+                    k = 1;
+                    printf("|");
+                }
+                if (j <= (i - n - 1))
+                {
+                    k = 1;
+                    printf("*");
+                }
+                if (j >= i)
+                {
+                    k = 1;
+                    printf("*");
+                }
+                if (k == 0)
+                    printf(" ");
+            }
+            else if (i <= 3 * n)
+            {
+                if (j <= 3 * n + 1 - i)
+                    printf("*");
+                else
+                    printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+// ***************************************************************
+//    A
+//   CB
+//  FED
+// JIHG
+//ONMLK
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    char k = 64;
+    for (i = 1; i <= 5; i++)
+    {
+        k = k + 2 * (i - 1) + 1;
+        for (j = 1; j <= 5; j++)
+        {
+            if (j >= 6 - i)
+                printf("%c", k--);
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+
+// **************************************************************
+//1
+//3*2
+//4*5*6
+//10*9*8*7
+//11*12*13*14*15
+#include <stdio.h>
+int main()
+{
+    int i, j, flag, k = 0, p;
+    for (i = 1; i <= 5; i++)
+    {
+        if (i % 2 == 1)
+            k = k + 1;
+        else
+        {
+            k--;
+            k = k + i;
+        }
+        flag = 1;
+        p = k;
+        for (j = 1; j <= 9; j++)
+        {
+            if (j <= 2 * i - 1)
+            {
+                if (flag == 1)
+                {
+                    printf("%d", p);
+                    if (i % 2)
+                    {
+                        p++;
+                        k++;
+                    }
+                    else
+                        p--;
+                }
+                else
+                    printf("*");
+                flag = 1 - flag;
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
