@@ -448,3 +448,217 @@ int main()
         printf("\n");
     }
 }
+
+
+// ********************************************************
+//EDCBA
+//EDCB
+//EDC
+//ED
+//E
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 5; j >= i; j--)
+        {
+            printf("%c", j + 64);
+        }
+        printf("\n");
+    }
+}
+
+// *******************************************************************
+//ABCDCBA
+//ABC CBA
+//AB BA
+//A  A
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    char k;
+    for (i = 1; i <= 4; i++)
+    {
+        k = 'A';
+        for (j = 1; j <= 7; j++)
+        {
+            if (j <= 5 - i || j >= 3 + i)
+            {
+                printf("%c", k);
+                j < 4 ? k++ : k--;
+            }
+            else
+            {
+                printf(" ");
+                if (j == 4)
+                    k--;
+            }
+        }
+        printf("\n");
+    }
+}
+
+
+// **************************************************************
+//EDCBA
+//DCBA
+//CBA
+//BA
+//A
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 5; i >= 1; i--)
+    {
+        for (j = i; j >= 1; j--)
+        {
+            printf("%c", j + 64);
+        }
+        printf("\n");
+    }
+}
+
+
+// ****************************************************************
+//ABCDEFG rotated u star
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    char k;
+    for (i = 1; i <= 4; i++)
+    {
+        k = 'A';
+        for (j = 1; j <= 7; j++)
+        {
+            if (j <= 5 - i || j >= 3 + i)
+                printf("%c", k);
+            else
+                printf(" ");
+            k++;
+        }
+        printf("\n");
+    }
+}
+
+
+// *********************************************************8
+//54321 in line 5
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 5; j >= 1; j--)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+}
+
+// *************************************************************
+//55555 in 5 line same no
+//44444 in 5 line same no
+//etc
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 5; i >= 1; i--)
+    {
+        for (j = 5; j >= 1; j--)
+        {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+}
+
+
+// *******************************************************8
+//54321
+//5432
+//543
+//54
+//5
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 5; j >= i; j--)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+}
+
+// ***************************************************************
+//5
+//54
+//543
+//5432
+//54321
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 5; i >= 1; i--)
+    {
+        for (j = 5; j >= i; j--)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+} 
+
+// *********************************************************************************8
+//1
+//232
+//34543
+//4567654
+#include <stdio.h>
+int main()
+{
+    int i, j, k;
+    for (i = 1; i <= 4; i++)
+    {
+        k = i;
+        for (j = 1; j <= 7; j++)
+        {
+            if (j >= 5 - i && j <= 3 + i)
+            {
+                printf("%d", k);
+                j < 4 ? k++ : k--;
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+// **********************************************************************
+// 12345 right side star
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+}
