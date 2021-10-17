@@ -1884,3 +1884,220 @@ void main()
     }
     getch();
 }
+
+// *****************************************************
+//limits....
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    char i = 1;
+    for (x = 1; x <= 800; x++)
+    {
+        printf(" %c ", i);
+        if (x == 800)
+            printf("\n");
+        if (x == 800)
+            break;
+    }
+}
+
+// *****************************************************************8
+//emoji heart
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 1; j <= 5; j++)
+        {
+            if (j <= i)
+                printf("%c", 3);
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+    getch();
+}
+
+
+// **********************************************************
+// heart inside name
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int i, j, n;
+    char name[50];
+    int len;
+    printf("Enter your name: ");
+    gets(name);
+    printf("Enter n : ");
+    scanf("%d", &n);
+    len = strlen(name);
+    for (i = n / 2; i <= n; i += 2)
+    {
+        for (j = 1; j < n - i; j += 2)
+        {
+            printf(" ");
+        }
+        for (j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        for (j = 1; j <= n - i; j++)
+        {
+            printf(" ");
+        }
+        for (j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (i = n; i >= 1; i--)
+    {
+        for (j = i; j < n; j++)
+        {
+            printf(" ");
+        }
+        if (i == n)
+        {
+            for (j = 1; j <= (n * 2 - len) / 2; j++)
+            {
+                printf("*");
+            }
+            printf("%s", name);
+            for (j = 1; j < (n * 2 - len) / 2; j++)
+            {
+                printf("*");
+            }
+        }
+        else
+        {
+            for (j = 1; j <= (i * 2) - 1; j++)
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// *******************************************************************
+//star A
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 7; i++)
+    {
+        for (j = 1; j <= 5; j++)
+        {
+            if ((i == 1 && j > 1 && j < 5) || (j == 1 && i > 1) || (j == 5 && i > 1) || i == 4)
+            {
+                printf("* ", j);
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+// ******************************************************************
+//star 7
+#include <stdio.h>
+int main()
+{
+    int i, j, k;
+    for (i = 0; i <= 11; i++)
+    {
+        for (j = 0; j <= 6; j++)
+        {
+            if (i < 2 && j > 0 && j < 5 || i > 4 && i < 7 && j > 1 && j < 6 || j == 4)
+            {
+                printf("***");
+            }
+            else
+            {
+                printf("   ");
+            }
+        }
+        printf("\n");
+    }
+    getch();
+}
+
+// **********************************************************
+//INDIA
+#include <stdio.h>
+int main()
+{
+    char s[] = "INDIA";
+    int i, j;
+    for (i = 0; s[i]; i++)
+    {
+        for (j = 0; j <= i; j++)
+            printf("%c", s[j]);
+        printf("\n");
+    }
+}
+
+
+// ****************************************************
+//Printing name in Triangle
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+    char name[] = "Karn Tiwari";
+    int len, i, j;
+
+    len = strlen(name);
+
+    for (i = 0; i < len; i++)
+    {
+        for (j = 0; j <= i; j++)
+        {
+            printf("%c", name[j]);
+        }
+        printf("\n");
+    }
+    getch();
+    return 0;
+}
+
+// *************************************************************************
+
+//*
+//*A*
+//*A*A*
+//*A*A*A*
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            if (j % 2 == 0)
+                printf("A");
+            else
+                printf("*");
+        }
+        printf("\n");
+    }
+}
