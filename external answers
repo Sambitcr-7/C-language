@@ -261,3 +261,118 @@ int main()
     }
     return 0;
 }
+
+//structure to make a book structure and its member bookid, bookname, bookprice and insert 10 book details and display the costlist bookname
+#include<stdio.h>
+struct BOOK
+{
+    int bookid;
+    char bookname[20];
+    int bookprice;
+};
+struct BOOK bk[10];
+int main()
+{
+    printf("Enter the details of book :");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Book %d:-", i+1);
+        scanf("%d%s%d", &bk[i].bookid, &bk[i].bookname, &bk[i].bookprice);
+    }
+    struct BOOK cost = bk[0];
+    for (int i = 0; i < 10; i++)
+    {
+        if(bk[i].bookprice >= cost.bookprice)
+        {
+            cost = bk[i];
+        }
+    }
+    printf("The costline bookname with cost %d is %s", cost.bookprice, cost.bookname);
+    return 0;
+    
+};
+
+//sort the given numbers in descending order (eg if numbers are 23 45 67 12 9 5 then descending order is 67 45 23 12 9 5)
+#include<stdio.h>
+int main()
+{
+    int arr[10],temp;
+    printf("Enter the number you want to sort out :");
+    for(int i = 0; i < 10; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for(int i = 0; i < 10; i++)
+    {
+        for(int j = i + 1; j  <10; j++)
+        {
+            if(arr[i]<arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        printf("%d", arr[i]);
+    }
+    return 0;
+}
+
+// C to given number N is palindrome or not and if number is palindrome then only check number is odd or even
+#include<stdio.h>
+int main()
+{
+    int num, t, sum = 0;
+    printf("Enter the number :");
+    scanf("%d", &num);
+    int temp = num;
+    while (num>0)
+    {
+        t = num%10;
+        sum = (sum * 10) +t;
+        num/ = 10;
+    }
+    if(sum==temp)
+    {
+        printf("Number is palindrome & ");
+        if(t%2 == 0) printf("Number is even");
+        else printf("Number is odd");
+    }else printf("Number is not a palindrome");
+   return 0;  
+}
+
+
+// String in reverse using a pointer (e.g if input is GENUINE then reverse output is ENIUNEG)
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[20],*ptr;
+    printf("Enter a string :");
+    scanf("%s", &str);
+    for(int i = strlen(str); i >=0;i--)
+    {
+        ptr = &str[i];
+        printf("%c", *ptr);
+    }
+    return 0;
+}
+
+
+//factorial using recusion
+#include<stdio.h>
+int factorial(int);
+int main(){
+    int n;
+    printf("Enter the number : ");
+    scanf("%d", &n);
+    printf("The factorial of %d is %d", n, factorial(n));
+    return 0;
+}
+int factorial(int n)
+{
+    if(n == 0)
+     return 1;
+    else
+    return n * factorial(n - 1); 
+}
