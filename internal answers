@@ -1,1 +1,194 @@
+//1 add all even digits of given number N using function 
+#include <stdio.h>
+int EvenDigitsSum(int input1)
+{
+    int rem, sum = 0;
+    while(input1 !=0)
+    {
+        rem=input1%10;
+        if(rem%2==0)
+        {
+            sum=sum+rem;
+        }
+        input1 = input1/10;
+    }
+    return sum;
+}
+int main()
+{
+    int num;
+    printf("Enter the number : ");
+    scanf("%d", &num);
+    printf("%d",EvenDigitsSum(num));
+    return 0;
+}
 
+
+//2 print world in c language
+#include<stdio.h>
+int main()
+{
+    char s[]="World";
+    int i, j;
+    for(i=0;s[i];i++)
+    {
+        for(j=0;j<=i;j++)
+        printf("%c",s[j]);
+        printf("\n");
+    }
+    return 0;
+}
+
+//3 write a  C program if input is BRICS then display BARAIACAS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[20];
+    int i;
+    printf("Enter a string  : ");
+    scanf("%s",&str);
+    for(int i = 0; i < strlen(str);i++)
+    {
+        if(i != 0)
+        {
+            printf("%c",65);
+        }
+        printf("%c",str[i]);
+    }
+    return 0;
+}
+
+//4 find sum of following series 1^3+2^3+3^3+.......+n^3
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("Enter the number of term : ");
+    scanf("%d",&num);
+    printf("Requried output is %d",cubfun(num));
+    return 0;
+}
+int cubfun(int a)
+{
+    int sum = 0;
+    for(int i = 1; i <=a; i++)
+    {
+        sum=sum+(i*i*i);
+    }
+    return sum;
+}
+
+
+//5 Create structure and insert 10 values of CAR brandname having price more than 400000/-(4lakh)
+#include<stdio.h>
+struct car
+{
+    char brandname[20];
+    int price;
+    int year;
+}c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
+int main()
+{
+    for(int i = 1; i <=10;i++)
+    {
+        printf("Enter Brandname, Price , Year of purchase of car %d : ", i);
+        scanf("");
+    }
+    return 0;
+}
+
+//6 check given number N is prime and Number is between 100 to 200
+#include<stdio.h>
+int main()
+{
+    int num, count = 0;
+    printf("Enter a number : ");
+    scanf("%d",&num);
+    if(num > 100 num < 200)
+    {
+        for(int i = 2; i < num;i++)
+        {
+            if(num % i == 0)
+            {
+                count++;
+            }
+        }
+        if (count==0)
+        {
+            printf("No is prime");
+        }
+        else
+        printf("No is not prime");
+    }
+    else
+    printf("No. is not in between 100 and 200");
+    return 0;
+}
+
+//7 find total number alphabet available in given string before alphabet .p is n,i,e,i so total 4 will be output
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[25];
+    int count=0;
+    printf("Enter a string:\n");
+    scanf("%s",&str);
+    for(int i = 0; i < strlen(str);i++)
+    {
+        if(str[i]<'p')
+        {
+            count++;
+        }
+    }printf("Total number of alphabet before p is %d", count);
+    return 0;
+}
+
+
+//8 find total number that is even and divisiable by 3 in given two dimensional
+//matrix using pointer
+// 4 47 9
+// 3 45 12
+// 30 18 120
+#include<stdio.h>
+int main()
+{
+    int count = 0, arr[3][3]={{4,47,9},{3,45,12},{30,18,120}};
+    int p*;
+    for(int i = 0; i < 3; i++)
+    {
+        for(int j = 0; j<3; j++)
+        {
+            p=&arr[i][j];
+            if(*p%2==0 && *p%3==0)
+            {
+                count++;
+            }
+        }
+        printf("Total required number is %d",count);
+    }
+    return 0;
+}
+
+//11 clculate a^bc.a,b and c are interger variable using function 
+#include<stdio.h>
+int func(int,int , int);
+int main()
+{
+    int a,b,c;
+    printf("Enter the value of a,b,c : ");
+    scanf("%d%d%d",&a,&b,&c);
+
+    printf("Requrid result is %d",func(a,b,c));
+    return 0;
+}
+int func(int a, int b, int c)
+{
+    int sum=1;
+    for(int i = 1; i <=b*c;i++)
+    {
+        sum = sum*a;
+    }
+    return sum;
+}
