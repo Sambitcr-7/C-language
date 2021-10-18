@@ -1,1 +1,83 @@
+// 1. write an Algorithm to display "GGV Bilaspur"  ******
 
+#include <stdio.h>
+int main()
+{
+    printf("GGV  Bilaspur");
+    return 0;
+}
+// 2.Addsion of two program   *****
+// #include <stdio.h>
+
+// int main()
+// {
+//     float a,b,sum;
+//     a=10.4;
+//     b=36.9;
+//     sum=a+b;
+//     printf("sum of %f and %f is %f",a,b,sum);
+
+//     return 0;
+// }
+
+// Remainder of all add+sub+Mul+Div*****
+#include <stdio.h>
+
+int main()
+{
+    int a = 9, b = 4, sum;
+    sum = a + b;
+    printf("a+b = %d \n", sum);
+    sum = a - b;
+    printf("a-b = %d \n", sum);
+    sum = a * b;
+    printf("a*b = %d \n", sum);
+    sum = a / b;
+    printf("a/b = %d \n", sum);
+    sum = a % b;
+    printf("Remainder when a divided by b = %d \n", sum);
+
+    return 0;
+}
+
+//Finding odd and even Number****
+#include <stdio.h>
+
+int main()
+{
+    int number = 0;
+    printf("enter a number:");
+    scanf("%d", &number);
+    if (number % 2 == 0)
+    {
+        printf("your number is %d and it is an even number", number);
+    }
+    else
+    {
+        printf("your number is %d and it is an odd number", number);
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {    
+
+    int number1, number2, sum;
+    
+    printf("Enter two integers: ");
+    scanf("%d %d", &number1, &number2);
+
+    // calculating sum
+    sum = number1 + number2;      
+    
+    printf("%d + %d = %d", number1, number2, sum);
+    return 0;
+}
+
+// output 
+//Enter two integers :
+//12
+//22
+// 12 + 22 = 43
