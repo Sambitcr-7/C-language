@@ -81,3 +81,33 @@ int main() {
 //12
 //22
 // 12 + 22 = 43
+
+// To find variable is equal*********
+// #include <stdio.h>
+
+// int main()
+// {
+//     int v1,v2;
+//     printf("\nFirst variable is entered\n");
+//     scanf("%d",&v1);
+//     printf("Second variable is entered\n");
+//     scanf("%d",&v2);
+//     if(v1 !=v2)
+//     {
+//         printf("\nFirst variable is not equal to Second variable\n");
+//         if (v1<v2)
+//         {
+//             printf("\nFirst variable is not equal to Second variable\n");
+//         }
+//         else
+//         {
+//             printf("\nSecond variable is greater than the Frist variable\n");
+//         }
+//     }
+//     else
+//     {
+//         printf("\nFrist variable is equal to Second variable\n");
+//     }
+
+//     return 0;
+// }
